@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>
+    PWA IEVN1003
+  </h1>
+
+  <div>
+    {{title}}
+  </div>
+
+  <div>
+    La suma de 3 + 3 es
+  </div>
+
+  <div>
+    <h2>El dobre de 3 es {{duplicarnumero(3)}}</h2>
+  </div>
+
+  <div>
+    <h2>
+      Datos pelicula:
+    </h2>
+    <div>
+      {{pelicula.titulo | uppercase}}
+    </div>
+    <div>
+      {{pelicula.fechaLanzamiento | date:"dd-MM-yy"}}
+    </div>
+    <div>
+      {{pelicula.precio | currency}}
+    </div>
+  </div>
+
+  <app-heroes-list></app-heroes-list>
+</body>
+</html>
