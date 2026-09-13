@@ -1,0 +1,59 @@
+<div class="col-6">
+    <div class="mb-3">
+        <form action="">
+            <div class="form-group pt-4">
+                <label for="num1">Numero1:</label>
+                <input [(ngModel)]="num1"
+                type="text"
+                name="num1"
+                class="from-control"
+                id="num1"
+                placeholder="Ingresa Numero"
+                >
+            </div>
+            <div class="form-group pt-4">
+                <label for="num2">Numero2:</label>
+                <input [(ngModel)]="num2"
+                type="text"
+                name="num2"
+                class="from-control"
+                id="num2"
+                placeholder="Ingresa Numero"
+                >
+            </div>
+                <div class="form-group pt-4">
+                    <label class="form-label">Opereaciones a elegir:</label>
+                    
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="operacion" id="opSumar" value="sumar" [(ngModel)]="operacion">
+                        <label class="form-check-label" for="opSumar">Sumar</label>
+                    </div>
+                    
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="operacion" id="opRestar" value="restar" [(ngModel)]="operacion">
+                        <label class="form-check-label" for="opRestar">Diferencia</label>
+                    </div>
+                    
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="operacion" id="opMultiplicar" value="multiplicar" [(ngModel)]="operacion">
+                        <label class="form-check-label" for="opMultiplicar">Multiplicar</label>
+                    </div>
+                    
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="operacion" id="opDividir" value="dividir" [(ngModel)]="operacion">
+                        <label class="form-check-label" for="opDividir">Dividir</label>
+                    </div>
+                </div>
+            <br/>
+            <!-- <button (click)="sumar()"type="button" class="btn btn-primary">Sumar</button>
+            <button (click)="restar()"type="button" class="btn btn-primary">Restar</button>
+            <button (click)="multipliicar()"type="button" class="btn btn-primary">Multipliicar</button>
+            <button (click)="dividir()"type="button" class="btn btn-primary">Dividir</button> -->
+            <button (click)="calcular()" type="button" class="btn btn-primary">Resolver</button>
+        </form>
+    </div>
+</div>
+
+<div class="col-6">
+    <h2>Resultado: {{resultado}}</h2>
+</div>

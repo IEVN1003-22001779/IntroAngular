@@ -18,6 +18,4 @@ export class App {
     fechaLanzamiento: new Date(),
     precio:2353
   }
-
-  
 }
