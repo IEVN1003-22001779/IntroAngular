@@ -1,0 +1,63 @@
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-12 mb-3">
+            <h3 class="text-primary">Calcular el Área de las Figuras</h3>
+        </div>
+
+        <div class="col-md-12 mb-3">
+            <div class="card p-3">
+                <h5>Selecciona tu figura a calcular:</h5>
+                <div class="d-flex flex-wrap gap-3 mt-2">
+                    <div class="form-check">
+                        <input [(ngModel)]="opcionDefecto" class="form-check-input" type="radio" name="figura" id="figCuadrado" value="cuadrado">
+                        <label class="form-check-label" for="figCuadrado">Cuadrado</label>
+                    </div>
+                    <div class="form-check">
+                        <input [(ngModel)]="opcionDefecto" class="form-check-input" type="radio" name="figura" id="figTriangulo" value="triangulo">
+                        <label class="form-check-label" for="figTriangulo">Triángulo</label>
+                    </div>
+                    <div class="form-check">
+                        <input [(ngModel)]="opcionDefecto" class="form-check-input" type="radio" name="figura" id="figTrapecio" value="trapecio">
+                        <label class="form-check-label" for="figTrapecio">Trapecio</label>
+                    </div>
+                    <div class="form-check">
+                        <input [(ngModel)]="opcionDefecto" class="form-check-input" type="radio" name="figura" id="figPentagono" value="pentagono">
+                        <label class="form-check-label" for="figPentagono">Pentágono</label>
+                    </div>
+                    <div class="form-check">
+                        <input [(ngModel)]="opcionDefecto" class="form-check-input" type="radio" name="figura" id="figCirculo" value="circulo">
+                        <label class="form-check-label" for="figCirculo">Círculo</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card p-3 mb-3">
+                <div class="form-group mb-3">
+                    <label for="Base">Lado o Radio:</label>
+                    <input [(ngModel)]="base" type="number" class="form-control" id="Base" name="Base">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card p-3 mb-3">
+                <div class="form-group mb-3">
+                    <label for="Altura">Altura:</label>
+                    <input [(ngModel)]="altura" type="number" class="form-control" id="Altura" name="Altura">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 text-center mt-3">
+            <button (click)="calcular()" type="button" class="btn btn-primary">
+                Calcular el área de la figura
+            </button>
+            <div class="mt-4">
+                <h4>El área de la figura es: {{ resultado }}</h4>
+            </div>
+        </div>
+
+    </div>
+</div>
