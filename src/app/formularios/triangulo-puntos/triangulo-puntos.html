@@ -1,0 +1,68 @@
+<div class="container mt-4">
+    
+    <div class="text-center mb-4">
+        <h3 class="text-primary">Puntos del Triángulo</h3>
+    </div>
+
+    <div class="row text-center mb-4">
+        
+        <div class="col-sm-4 mb-3">
+            <h5 class="text-danger">Punto A</h5>
+            
+            <label class="fw-bold">X:</label>
+            <input [(ngModel)]="x1" type="number" class="form-control mb-2">
+            
+            <label class="fw-bold">Y:</label>
+            <input [(ngModel)]="y1" type="number" class="form-control">
+        </div>
+
+        <div class="col-sm-4 mb-3">
+            <h5 class="text-danger">Punto B</h5>
+            
+            <label class="fw-bold">X:</label>
+            <input [(ngModel)]="x2" type="number" class="form-control mb-2">
+            
+            <label class="fw-bold">Y:</label>
+            <input [(ngModel)]="y2" type="number" class="form-control">
+        </div>
+
+        <div class="col-sm-4 mb-3">
+            <h5 class="text-danger">Punto C</h5>
+            
+            <label class="fw-bold">X:</label>
+            <input [(ngModel)]="x3" type="number" class="form-control mb-2">
+            
+            <label class="fw-bold">Y:</label>
+            <input [(ngModel)]="y3" type="number" class="form-control">
+        </div>
+
+    </div>
+
+    <div class="text-center mb-4">
+        <button (click)="puntos()" class="btn btn-primary text-white px-4 py-2 fw-bold rounded-pill">
+            Checar Los Puntos
+        </button>
+    </div>
+
+    <div *ngIf="calculo" class="text-center mt-4 border-top pt-4">
+        
+        <h4 class="text-secondary mb-3">Resultado</h4>
+        
+        <p class="fw-bold text-dark"> <!-- el &nbsp es para agregar espacios -->
+            A: ({{x1}}, {{y1}}) &nbsp;|&nbsp; B: ({{x2}}, {{y2}}) &nbsp;|&nbsp; C: ({{x3}}, {{y3}})
+        </p>
+
+        <!-- Mensaje si no es triángulo -->
+        <h5 *ngIf="area == 0" class="text-danger fw-bold mt-3">
+            {{ resultado }} <!-- tanto el == 0 y el != 0 son para verificar si es un triángulo -->
+        </h5>
+
+        <!-- Mensajes si SÍ es triángulo -->
+        <div *ngIf="area != 0" class="mt-3">
+            <h5 class="text-success fw-bold">{{ resultado }}</h5>
+            <h4 class="text-success fw-bolder mt-2">Área: {{ area }}</h4>
+        </div>
+        
+    </div>
+
+</div>
